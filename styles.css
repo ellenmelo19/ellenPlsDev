@@ -15,11 +15,6 @@
   --window-shadow: rgba(126, 93, 160, 0.25);
   --ui-font: "VT323", "Courier New", monospace;
   --pixel-font: "Press Start 2P", "Courier New", monospace;
-  --sprite-sheet: url("assets/ui-pack.png");
-  --sprite-sheet-width: 128px;
-  --sprite-sheet-height: 128px;
-  --sprite-cell: 8px;
-  --sprite-scale: 3;
 }
 
 *,
@@ -83,102 +78,56 @@ body {
 .dock {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 2px solid var(--window-border);
-  border-radius: 14px;
-  padding: 18px 14px;
-  box-shadow: 0 12px 24px var(--window-shadow);
-  backdrop-filter: blur(6px);
+  gap: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 4px;
+  box-shadow: none;
+  backdrop-filter: none;
   position: sticky;
   top: 16px;
   align-self: stretch;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .dock-item {
   appearance: none;
-  text-decoration: none;
-  color: inherit;
-  display: grid;
-  place-items: center;
-  gap: 6px;
-  padding: 12px 14px;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #fff 0%, #ffeaf7 100%);
-  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.6);
-  transition: transform 0.2s ease, border 0.2s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease;
   cursor: pointer;
-  min-width: 110px;
 }
 
 .dock-item:hover,
 .dock-item:focus {
-  border-color: var(--purple-300);
   transform: translateY(-2px);
 }
 
+.dock-item:focus-visible img {
+  outline: 2px solid #f0bce0;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 .dock-item.active {
-  border-color: #f0bce0;
-  background: linear-gradient(180deg, #ffe7f5 0%, #fff 100%);
-  box-shadow: inset 0 0 0 2px #fff;
+  transform: translateY(-2px) scale(1.02);
 }
 
-.dock-icon {
-  font-size: 18px;
-}
-
-.dock-label {
-  font-family: var(--pixel-font);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.sprite {
-  width: calc(var(--sw, 2) * var(--sprite-cell) * var(--sprite-scale));
-  height: calc(var(--sh, 2) * var(--sprite-cell) * var(--sprite-scale));
-  background-image: var(--sprite-sheet);
-  background-repeat: no-repeat;
-  background-size: calc(var(--sprite-sheet-width) * var(--sprite-scale))
-    calc(var(--sprite-sheet-height) * var(--sprite-scale));
-  background-position: calc(var(--sx, 0) * var(--sprite-cell) * var(--sprite-scale) * -1)
-    calc(var(--sy, 0) * var(--sprite-cell) * var(--sprite-scale) * -1);
+.dock-item img {
+  display: block;
+  height: clamp(34px, 3.2vw, 42px);
+  width: auto;
   image-rendering: pixelated;
-  display: inline-block;
+  filter: drop-shadow(0 6px 10px rgba(59, 34, 85, 0.2));
 }
 
-/* Ajuste os offsets abaixo quando o arquivo estiver em assets/ui-pack.png */
-.sprite-sobre {
-  --sx: 0;
-  --sy: 9;
-}
-
-.sprite-carreira {
-  --sx: 3;
-  --sy: 9;
-}
-
-.sprite-projetos {
-  --sx: 6;
-  --sy: 9;
-}
-
-.sprite-livros {
-  --sx: 9;
-  --sy: 9;
-}
-
-.sprite-hobbies {
-  --sx: 12;
-  --sy: 9;
-}
-
-.sprite-redes {
-  --sx: 14;
-  --sy: 9;
+.dock-item.active img {
+  filter: drop-shadow(0 8px 16px rgba(59, 34, 85, 0.35));
 }
 
 .windows {
