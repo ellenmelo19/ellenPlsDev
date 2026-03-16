@@ -212,6 +212,12 @@ body {
   align-items: center;
 }
 
+.avatar-stack {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
 .avatar-frame {
   background: #f8d9f1;
   border: 2px solid #f0bce0;
@@ -316,6 +322,7 @@ p {
 .stat-row {
   display: grid;
   gap: 6px;
+  justify-items: center;
 }
 
 .stat {
@@ -328,6 +335,17 @@ p {
 .stat-label {
   font-family: var(--pixel-font);
   font-size: 9px;
+}
+
+.stat-value img {
+  height: 18px;
+  width: auto;
+  image-rendering: pixelated;
+  margin-right: 4px;
+}
+
+.stat-value img:last-child {
+  margin-right: 0;
 }
 
 .timeline {
