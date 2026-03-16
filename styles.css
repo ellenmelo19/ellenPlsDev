@@ -282,6 +282,16 @@ p {
   color: var(--ink-soft);
 }
 
+.about-text p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.about-text strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -295,6 +305,7 @@ p {
   border-radius: 999px;
   padding: 5px 12px;
   font-size: 15px;
+  font-weight: 700;
 }
 
 .stat-row {
