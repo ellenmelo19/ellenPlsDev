@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ellen | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-loop" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div class="desktop">
+      <aside class="dock" aria-label="Navegacao">
+        <button class="dock-item active" type="button" data-target="sobre">
+          <span class="dock-icon">*</span>
+          <span class="dock-label">Sobre</span>
+        </button>
+        <button class="dock-item" type="button" data-target="carreira">
+          <span class="dock-icon">#</span>
+          <span class="dock-label">Carreira</span>
+        </button>
+        <button class="dock-item" type="button" data-target="projetos">
+          <span class="dock-icon">[]</span>
+          <span class="dock-label">Projetos</span>
+        </button>
+        <button class="dock-item" type="button" data-target="livros">
+          <span class="dock-icon">==</span>
+          <span class="dock-label">Livros</span>
+        </button>
+        <button class="dock-item" type="button" data-target="hobbies">
+          <span class="dock-icon">+</span>
+          <span class="dock-label">Hobbies</span>
+        </button>
+        <button class="dock-item" type="button" data-target="redes">
+          <span class="dock-icon">@</span>
+          <span class="dock-label">Redes</span>
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <section class="window main-window">
+          <div class="titlebar">
+            <div class="title" id="windowTitle">Welcome.exe</div>
+            <div class="window-controls">
+              <span class="control">_</span>
+              <span class="control">[]</span>
+              <span class="control">X</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="page active" data-page="sobre" data-title="Welcome.exe">
+              <div class="hero">
+                <div class="avatar-frame">
+                  <div class="avatar">
+                    <div class="avatar-highlight"></div>
+                  </div>
+                  <div class="level-tag">LVL 22</div>
+                </div>
+                <div class="hero-text">
+                  <h1>Ola! Eu sou Ellen.</h1>
+                  <p>
+                    Desenvolvedora full stack com foco em entregar produto com
+                    carinho. Gosto de aprender coisas novas, testar ideias blablabla
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip">Java</span>
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">SQL</span>
+                    <span class="chip">Front-end</span>
+                    <span class="chip">Back-end</span>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat">
+                      <span class="stat-label">HP</span>
+                      <span class="stat-value">***</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-label">XP</span>
+                      <span class="stat-value">||||||..</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" data-page="carreira" data-title="Carreira.prof">
+              <h2>Carreira profissional</h2>
+              <p>
+                Aqui vai um resumo descontraido da minha experiencia. Substitua
+                pelos cargos, empresas e projetos que mais te orgulham.
+              </p>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-year">2024 - Hoje</span>
+                  <div class="timeline-body">
+                    <h3>Full Stack Dev - Empresa X</h3>
+                    <p>
+                      Criei features end-to-end, melhorei performance e liderei
+                      pequenas squads para entregar produtos com impacto.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-year">2022 - 2024</span>
+                  <div class="timeline-body">
+                    <h3>Backend Dev - Empresa Y</h3>
+                    <p>
+                      APIs, integracoes e boas praticas. Um periodo de muito
+                      crescimento tecnico.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-year">Antes</span>
+                  <div class="timeline-body">
+                    <h3>Estudos e transicao</h3>
+                    <p>
+                      Cursos, projetos pessoais e aquela energia de quem estava
+                      entrando na area.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" data-page="projetos" data-title="Projetos.exe">
+              <h2>Projetos</h2>
+              <div class="card-grid">
+                <article class="card">
+                  <h3>Pixel Tracker</h3>
+                  <p>
+                    Dashboard para monitorar metas pessoais, com gamificacao e
+                    visual retronostalgico.
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip">React</span>
+                    <span class="chip">Node</span>
+                    <span class="chip">Postgres</span>
+                  </div>
+                </article>
+                <article class="card">
+                  <h3>Focus Garden</h3>
+                  <p>
+                    App de produtividade com pomodoro e jardinagem virtual. Fofo
+                    e funcional.
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip">Vue</span>
+                    <span class="chip">Firebase</span>
+                  </div>
+                </article>
+                <article class="card">
+                  <h3>Retro Docs</h3>
+                  <p>
+                    Biblioteca de componentes que mistura estetica Win 2000 e
+                    acessibilidade moderna.
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">Storybook</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="page" data-page="livros" data-title="Livros.exe">
+              <h2>Livros e artigos</h2>
+              <div class="tabs">
+                <span class="tab active">Livros</span>
+                <span class="tab">Artigos</span>
+                <span class="tab">Guias</span>
+              </div>
+              <div class="list">
+                <div class="list-item">
+                  <span class="list-title">Clean Code</span>
+                  <span class="list-tags">Programacao</span>
+                  <span class="list-note">Leitura essencial para todo dev.</span>
+                </div>
+                <div class="list-item">
+                  <span class="list-title">Guia de Java</span>
+                  <span class="list-tags">Backend</span>
+                  <span class="list-note">Boas praticas e padroes.</span>
+                </div>
+                <div class="list-item">
+                  <span class="list-title">Seguranca Web</span>
+                  <span class="list-tags">Security</span>
+                  <span class="list-note">Otimas dicas de protecao.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" data-page="hobbies" data-title="Hobbies.bmp">
+              <h2>Hobbies e interesses</h2>
+              <div class="gallery">
+                <div class="frame">
+                  <div class="frame-title">Desenho</div>
+                  <div class="frame-body">Pixel art, sketch e fanarts.</div>
+                </div>
+                <div class="frame">
+                  <div class="frame-title">Jogos</div>
+                  <div class="frame-body">Cozy games, JRPG e indies.</div>
+                </div>
+                <div class="frame">
+                  <div class="frame-title">Cafe</div>
+                  <div class="frame-body">Cold brew + playlists longas.</div>
+                </div>
+                <div class="frame">
+                  <div class="frame-title">Leitura</div>
+                  <div class="frame-body">Fantasia, tecnologia e design.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page" data-page="redes" data-title="Contato.exe">
+              <h2>Redes sociais</h2>
+              <p>Vamos trocar uma ideia? Me chama por aqui:</p>
+              <div class="social-grid">
+                <a class="social-btn" href="#" aria-label="GitHub">
+                  <span>GitHub</span>
+                </a>
+                <a class="social-btn" href="#" aria-label="LinkedIn">
+                  <span>LinkedIn</span>
+                </a>
+                <a class="social-btn" href="#" aria-label="Instagram">
+                  <span>Instagram</span>
+                </a>
+                <a class="social-btn" href="#" aria-label="Email">
+                  <span>Email</span>
+                </a>
+              </div>
+              <div class="note">
+                <strong>Dica:</strong> substitua os links acima pelos seus
+                perfis reais.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="taskbar" aria-hidden="true">
+      <button class="start-btn">Start</button>
+      <div class="taskbar-apps">
+        <span class="task" id="taskTitle">Welcome.exe</span>
+      </div>
+      <div class="clock">10:42</div>
+    </footer>
+
+    <script>
+      const navButtons = document.querySelectorAll(".dock-item");
+      const pages = document.querySelectorAll(".page");
+      const windowTitle = document.getElementById("windowTitle");
+      const taskTitle = document.getElementById("taskTitle");
+
+      const setActivePage = (target) => {
+        pages.forEach((page) => {
+          page.classList.toggle("active", page.dataset.page === target);
+        });
+
+        navButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.target === target);
+        });
+
+        const activePage = document.querySelector(
+          `.page[data-page="${target}"]`
+        );
+        if (activePage && windowTitle && taskTitle) {
+          const title = activePage.dataset.title || "Welcome.exe";
+          windowTitle.textContent = title;
+          taskTitle.textContent = title;
+        }
+      };
+
+      navButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          setActivePage(button.dataset.target);
+        });
+      });
+    </script>
+  </body>
+</html>
