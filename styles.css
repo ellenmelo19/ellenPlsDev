@@ -42,11 +42,11 @@ body {
 .bg-loop {
   position: fixed;
   inset: 0;
-  background-image: url("assets/girl-idle.gif"),
+  background-image: url("assets/background-sem-bara.png"),
     linear-gradient(180deg, #c9e7ff 0%, #fbe7ff 40%, #ffdff1 100%);
   background-size: cover, cover;
   background-position: center, center;
-  opacity: 0.22;
+  opacity: 0.45;
   filter: saturate(1.1) contrast(1.05);
   image-rendering: pixelated;
   animation: float 9s ease-in-out infinite;
