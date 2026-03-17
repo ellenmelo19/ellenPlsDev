@@ -314,28 +314,183 @@ Além disso, estive responsável pela automação de processos, garantindo maior
             </div>
 
             <div class="page" data-page="livros" data-title="Livros.exe">
-              <h2>Livros e artigos</h2>
-              <div class="tabs">
-                <span class="tab active">Livros</span>
-                <span class="tab">Artigos</span>
-                <span class="tab">Guias</span>
+              <h2>Minha Estante</h2>
+              <div class="books-toolbar">
+                <button class="filter-btn active" type="button" data-filter="all">
+                  Todos
+                </button>
+                <button class="filter-btn" type="button" data-filter="backend">
+                  Backend
+                </button>
+                <button class="filter-btn" type="button" data-filter="frontend">
+                  Front-end
+                </button>
+                <button class="filter-btn" type="button" data-filter="design">
+                  Design
+                </button>
+                <button class="filter-btn" type="button" data-filter="security">
+                  Security
+                </button>
+                <button class="filter-btn" type="button" data-filter="prod">
+                  Produtividade
+                </button>
               </div>
-              <div class="list">
-                <div class="list-item">
-                  <span class="list-title">Clean Code</span>
-                  <span class="list-tags">Programacao</span>
-                  <span class="list-note">Leitura essencial para todo dev.</span>
-                </div>
-                <div class="list-item">
-                  <span class="list-title">Guia de Java</span>
-                  <span class="list-tags">Backend</span>
-                  <span class="list-note">Boas praticas e padroes.</span>
-                </div>
-                <div class="list-item">
-                  <span class="list-title">Seguranca Web</span>
-                  <span class="list-tags">Security</span>
-                  <span class="list-note">Otimas dicas de protecao.</span>
-                </div>
+              <div class="books-grid">
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="backend,prod">
+                  <h3 class="book-title">Introdução à programação com Python</h3>
+                  <p class="book-author">Nilo Ney Coutinho Menezes</p>
+                  <div class="book-tags">
+                    <span class="tag tag-backend">Backend</span>
+                    <span class="tag tag-lang">Python</span>
+                    <span class="tag tag-prod">Fundamentos</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroazul.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  O cara explica tudo de um jeito muito claro e direto, sem enrolação. A linguagem é super didática, parece que ele tá conversando com você e te levando pela mão.
+Os exemplos são bem práticos, o que ajuda muito a fixar o conteúdo, e ele foca na versão 3 do Python. Pra quem tá começando do zero, é ótimo porque não assume que você já sabe nada de programação.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="frontend">
+                  <h3 class="book-title">Introdução ao AngularJS</h3>
+                  <p>Williamson</p> 
+                  <div class="book-tags">
+                    <span class="tag tag-frontend">Front-end</span>
+                    <span class="tag tag-lang">JavaScript</span>
+                    <span class="tag tag-frontend">AngularJS</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livrovermehlo.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  A didática dele é realmente um ponto forte, explica de um jeito tranquilo e direto, sem enrolação.
+Confesso que senti falta de mais exemplos práticos e principalmente de um projetinho maior que fosse sendo construído ao longo dos capítulos. Às vezes ficava com aquela sensação de "tá, entendi a teoria, mas e agora na prática?". Fora isso, é um livro bem completo.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="backend,prod">
+                  <h3 class="book-title">Curso Intensivo de Python</h3>
+                  <p>Matthes</p> 
+                  <div class="book-tags">
+                    <span class="tag tag-backend">Backend</span>
+                    <span class="tag tag-lang">Python</span>
+                    <span class="tag tag-prod">Projetos</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroroxo.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  O livro é super organizado, explica tudo de um jeito direto e lógico, sem ficar enrolando, e ainda tem vários exercícios e projetos bem legais pra colocar a mão na massa logo. É bem mais fluido e divertido de seguir do que a maioria dos livros pra iniciante que eu já peguei.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="design">
+                  <h3 class="book-title">Anatomia Artística</h3>
+                  <p>Michel Lauricella</p>
+                  <div class="book-tags">
+                    <span class="tag tag-design">Design</span>
+                    <span class="tag tag-design">Desenho</span>
+                    <span class="tag tag-design">Anatomia</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroverde.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  Adorei que ele usa a técnica do écorché pra mostrar tudo de forma clara, e ainda tem aquela parte ótima das mãos (que é o pesadelo de todo mundo, né?) e as diferenças entre corpos masculinos e femininos. É um dos melhores que tem no mercado pra anatomia artística.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="prod">
+                  <h3 class="book-title">Metodologia Científica - Teoria e Prática</h3>
+                  <p>Carla Cruz & Uirá Ribeiro</p>
+                  <div class="book-tags">
+                    <span class="tag tag-prod">Pesquisa</span>
+                    <span class="tag tag-prod">Escrita</span>
+                    <span class="tag tag-prod">Academico</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroazul.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  Gostei bastante dessa abordagem mais humana, de entender a dificuldade real do aluno em vez de só jogar regra e norma. Pra mim, isso já faz o livro valer muito a pena, principalmente pra quem tá começando na graduação ou na pós e fica travado na hora de escrever artigo, TCC, etc.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="backend">
+                  <h3 class="book-title">Sistemas de Banco de Dados</h3>
+                  <p>Silberschatz Korth Sudarshan</p>
+                  <div class="book-tags">
+                    <span class="tag tag-backend">Backend</span>
+                    <span class="tag tag-lang">SQL</span>
+                    <span class="tag tag-backend">Dados</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroroxo.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  Um dos melhores pra quem tá começando ou quer entender banco de dados de verdade sem ficar perdido em formalidades chatas. Ele explica tudo de um jeito bem didático, começa do básico e vai subindo o nível sem te deixar pra trás. Eu gosto bastante porque consegue ser claro mesmo quando o assunto fica pesado (tipo normalização, transações, recuperação, etc.). Não é daqueles livros que parecem escritos pra impressionar professor, é pra aluno e profissional entenderem de fato.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="security">
+                  <h3 class="book-title">Redes de Computadores</h3>
+                  <p>Andrew Tanenbaum</p>
+                  <div class="book-tags">
+                    <span class="tag tag-security">Security</span>
+                    <span class="tag tag-security">Redes</span>
+                    <span class="tag tag-security">Infra</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroverde.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  Explica as coisas de um jeito bem didático, sem ficar enrolando, e ao mesmo tempo vai fundo nas camadas, nos protocolos, em redes sem fio, segurança… tudo o que a gente realmente precisa entender pra não ficar perdido no mundo real das redes. As edições mais novas tão bem atualizadas, o que ajuda bastante porque a área muda rápido pra caramba.
+Pra mim é aquele clássico que todo mundo que mexe com TI ou cursa a área tem que ler pelo menos uma vez. Recomendo de olhos fechados!</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="frontend">
+                  <h3 class="book-title">You Dont Know JS Yet - Get Started</h3>
+                  <p>Kyle Simpson</p>
+                  <div class="book-tags">
+                    <span class="tag tag-frontend">Front-end</span>
+                    <span class="tag tag-lang">JavaScript</span>
+                    <span class="tag tag-frontend">Fundamentos</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livrovermehlo.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  explica tudo com calma, entra nos detalhes, nas nuances, responde aquelas dúvidas que ficam martelando na cabeça da gente (tipo "pera, mas por que isso é diferente disso aqui?"). O Kyle Simpson parece que lê a mente de quem tá aprendendo, não pula nada e não assume que você já sabe um monte de coisa.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="frontend">
+                  <h3 class="book-title">You Dont Know JS Yet - Scope and Closures</h3>
+                  <p>Kyle Simpson</p>
+                  <div class="book-tags">
+                    <span class="tag tag-frontend">Front-end</span>
+                    <span class="tag tag-lang">JavaScript</span>
+                    <span class="tag tag-frontend">Avancado</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroazul.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  O livro é curtinho, direto ao ponto, sem historinha desnecessária, foca só em escopo e closures, com exemplos bem curtos e fáceis de entender (nada de código de 30 linhas espalhado em duas páginas). Ele explica as coisas de vários ângulos, repete o conceito até grudar na cabeça – o que é ótimo pra quem já mexe um pouco com JS mas ainda se confunde com hoisting, closure e como o compilador realmente lê o código.</p>
+                </article>
+                <article class="book-card" tabindex="0" role="button" aria-expanded="false" data-tags="backend">
+                  <h3 class="book-title">Java for Dummies</h3>
+                  <p>Barry Burd</p>
+                  <div class="book-tags">
+                    <span class="tag tag-backend">Backend</span>
+                    <span class="tag tag-lang">Java</span>
+                    <span class="tag tag-backend">Iniciante</span>
+                  </div>
+                  <div
+                    class="book-cover"
+                    style="--book-image: url('assets/livros/livroroxo.png')"
+                  ></div>
+                  <p> ⭐⭐⭐⭐⭐ </p>
+                  <p class="book-notes">  Vai direto ao ponto e te ajuda a botar a mão na massa rápido. Pra mim, que já vi muita gente travar no começo por causa de livros muito "certinhos" e chatos, esse parece ser um baita diferencial.
+Acho que é uma ótima pedida pra quem quer virar desenvolvedor Java sem se sentir perdido ou intimidado. Realmente um guia passo a passo bem tranquilo e divertido.</p>
+                </article>
+                
               </div>
             </div>
 
@@ -388,6 +543,25 @@ Além disso, estive responsável pela automação de processos, garantindo maior
       </main>
     </div>
 
+    <div class="modal" id="bookModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="window modal-window" role="dialog" aria-modal="true">
+        <div class="titlebar">
+          <div class="title">Obs.exe</div>
+          <div class="window-controls">
+            <button class="control modal-close" type="button" aria-label="Fechar">
+              X
+            </button>
+          </div>
+        </div>
+        <div class="content">
+          <h3 id="modalTitle">Titulo</h3>
+          <p id="modalAuthor"></p>
+          <p id="modalNotes"></p>
+        </div>
+      </div>
+    </div>
+
     <footer class="taskbar" aria-hidden="true">
       <button class="start-btn">Start</button>
       <div class="taskbar-apps">
@@ -428,9 +602,129 @@ Além disso, estive responsável pela automação de processos, garantindo maior
       });
 
       const audio = document.getElementById("bgm");
+      const playToggle = document.getElementById("playToggle");
+      const muteToggle = document.getElementById("muteToggle");
+
       if (audio) {
         audio.volume = 0.6;
       }
+
+      const syncLabels = () => {
+        if (!audio) return;
+        if (playToggle) {
+          playToggle.textContent = audio.paused ? "Play" : "Pause";
+        }
+        if (muteToggle) {
+          muteToggle.textContent = audio.muted ? "Unmute" : "Mute";
+        }
+      };
+
+      if (audio && playToggle) {
+        playToggle.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.play().catch(() => {});
+          } else {
+            audio.pause();
+          }
+          syncLabels();
+        });
+      }
+
+      if (audio && muteToggle) {
+        muteToggle.addEventListener("click", () => {
+          audio.muted = !audio.muted;
+          syncLabels();
+        });
+      }
+
+      syncLabels();
+
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const bookCards = document.querySelectorAll(".book-card");
+
+      const normalizeTag = (value) =>
+        (value || "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "")
+          .trim();
+
+      const getCardTags = (card) => {
+        const dataTags = (card.dataset.tags || "")
+          .split(",")
+          .map((t) => t.trim());
+        const visualTags = Array.from(card.querySelectorAll(".book-tags .tag")).map(
+          (tag) => tag.textContent || ""
+        );
+        return [...dataTags, ...visualTags].map(normalizeTag).filter(Boolean);
+      };
+
+      const applyFilter = (filter) => {
+        const filterKey = normalizeTag(filter);
+        bookCards.forEach((card) => {
+          const tags = getCardTags(card);
+          const match = filterKey === "all" || tags.includes(filterKey);
+          card.classList.toggle("is-hidden", !match);
+        });
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          applyFilter(button.dataset.filter || "all");
+        });
+      });
+
+      const bookModal = document.getElementById("bookModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalAuthor = document.getElementById("modalAuthor");
+      const modalNotes = document.getElementById("modalNotes");
+      const modalClose = document.querySelector(".modal-close");
+      const modalBackdrop = document.querySelector(".modal-backdrop");
+
+      const openModal = (card) => {
+        if (!bookModal) return;
+        const title = card.querySelector(".book-title")?.textContent?.trim();
+        const author = card.querySelector("p")?.textContent?.trim();
+        const notes = card.querySelector(".book-notes")?.textContent?.trim();
+
+        if (modalTitle) modalTitle.textContent = title || "Obs";
+        if (modalAuthor) modalAuthor.textContent = author || "";
+        if (modalNotes) modalNotes.textContent = notes || "";
+
+        bookModal.classList.add("open");
+        bookModal.setAttribute("aria-hidden", "false");
+      };
+
+      const closeModal = () => {
+        if (!bookModal) return;
+        bookModal.classList.remove("open");
+        bookModal.setAttribute("aria-hidden", "true");
+      };
+
+      bookCards.forEach((card) => {
+        card.addEventListener("click", () => openModal(card));
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openModal(card);
+          }
+        });
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener("click", closeModal);
+      }
+
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener("click", closeModal);
+      }
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && bookModal?.classList.contains("open")) {
+          closeModal();
+        }
+      });
     </script>
   </body>
 </html>
