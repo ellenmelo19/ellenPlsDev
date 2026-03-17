@@ -175,18 +175,12 @@
                 </div>
 
                 <div class="player-panel">
-                  <h3>Player</h3>
+                  <h3>Musica</h3>
                   <div class="player-row">
-                    <button class="player-btn" type="button" id="playToggle">
-                      Play
-                    </button>
-                    <button class="player-btn" type="button" id="muteToggle">
-                      Mute
-                    </button>
-                    <span class="player-track">Lo-fi Pixel Loop</span>
+                    <span class="player-track">Minha faixa do momento</span>
                   </div>
-                  <audio id="bgm" preload="none" loop>
-                    <source src="assets/theme.mp3" type="audio/mpeg" />
+                  <audio id="bgm" controls preload="none">
+                    <source src="assets/musica/musica.mp3" type="audio/mpeg" />
                   </audio>
                 </div>
               </div>
@@ -387,38 +381,9 @@
       });
 
       const audio = document.getElementById("bgm");
-      const playToggle = document.getElementById("playToggle");
-      const muteToggle = document.getElementById("muteToggle");
-
-      const syncLabels = () => {
-        if (!audio) return;
-        if (playToggle) {
-          playToggle.textContent = audio.paused ? "Play" : "Pause";
-        }
-        if (muteToggle) {
-          muteToggle.textContent = audio.muted ? "Unmute" : "Mute";
-        }
-      };
-
-      if (audio && playToggle) {
-        playToggle.addEventListener("click", () => {
-          if (audio.paused) {
-            audio.play().catch(() => {});
-          } else {
-            audio.pause();
-          }
-          syncLabels();
-        });
+      if (audio) {
+        audio.volume = 0.6;
       }
-
-      if (audio && muteToggle) {
-        muteToggle.addEventListener("click", () => {
-          audio.muted = !audio.muted;
-          syncLabels();
-        });
-      }
-
-      syncLabels();
     </script>
   </body>
 </html>
