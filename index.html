@@ -148,6 +148,48 @@
                   </div>
                 </div>
               </div>
+              <div class="about-extras">
+                <div class="mini-grid">
+                  <div class="mini-card">
+                    <h3>Agora</h3>
+                    <p>Estudando JAVA</p>
+                    <p>Estudando CyberSegurança</p>
+                    <p>Estudando DevOps</p>
+                  </div>
+                  <div class="mini-card">
+                    <h3>Pets</h3>
+                    <p>2 Beagles encrenqueiras.</p>
+                    <img
+                      src="assets/cacauamora.png"
+                      alt="Cacau e Amora"
+                      class="mini-pet"
+                    />
+                  </div>
+                  <div class="mini-card languages">
+                    <h3>Idiomas</h3>
+                    <p class="lang-item">🇧🇷 Portugues - Nativo</p>
+                    <p class="lang-item">🇺🇸 Ingles - B2 Avançado</p>
+                    <p class="lang-item">🇪🇸 Espanhol - Avançado </p>
+                    <p class="lang-item">🇫🇷 Frances - Básico </p>        
+                  </div>
+                </div>
+
+                <div class="player-panel">
+                  <h3>Player</h3>
+                  <div class="player-row">
+                    <button class="player-btn" type="button" id="playToggle">
+                      Play
+                    </button>
+                    <button class="player-btn" type="button" id="muteToggle">
+                      Mute
+                    </button>
+                    <span class="player-track">Lo-fi Pixel Loop</span>
+                  </div>
+                  <audio id="bgm" preload="none" loop>
+                    <source src="assets/theme.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
             </div>
 
             <div class="page" data-page="carreira" data-title="Carreira.prof">
@@ -343,6 +385,40 @@
           setActivePage(button.dataset.target);
         });
       });
+
+      const audio = document.getElementById("bgm");
+      const playToggle = document.getElementById("playToggle");
+      const muteToggle = document.getElementById("muteToggle");
+
+      const syncLabels = () => {
+        if (!audio) return;
+        if (playToggle) {
+          playToggle.textContent = audio.paused ? "Play" : "Pause";
+        }
+        if (muteToggle) {
+          muteToggle.textContent = audio.muted ? "Unmute" : "Mute";
+        }
+      };
+
+      if (audio && playToggle) {
+        playToggle.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.play().catch(() => {});
+          } else {
+            audio.pause();
+          }
+          syncLabels();
+        });
+      }
+
+      if (audio && muteToggle) {
+        muteToggle.addEventListener("click", () => {
+          audio.muted = !audio.muted;
+          syncLabels();
+        });
+      }
+
+      syncLabels();
     </script>
   </body>
 </html>
