@@ -799,6 +799,7 @@ Acho que é uma ótima pedida pra quem quer virar desenvolvedor Java sem se sent
       const pages = document.querySelectorAll(".page");
       const windowTitle = document.getElementById("windowTitle");
       const taskTitle = document.getElementById("taskTitle");
+      const clockEl = document.querySelector(".clock");
 
       const setActivePage = (target) => {
         pages.forEach((page) => {
@@ -829,6 +830,19 @@ Acho que é uma ótima pedida pra quem quer virar desenvolvedor Java sem se sent
           setActivePage(button.dataset.target);
         });
       });
+
+      const updateClock = () => {
+        if (!clockEl) return;
+        const now = new Date();
+        const time = now.toLocaleTimeString("pt-BR", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        clockEl.textContent = time;
+      };
+
+      updateClock();
+      setInterval(updateClock, 30000);
 
       const audio = document.getElementById("bgm");
       const playToggle = document.getElementById("playToggle");
