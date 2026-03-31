@@ -992,9 +992,9 @@ p {
 
 .contact-layout {
   display: grid;
-  gap: 24px;
+  gap: 2px;
   align-items: center;
-  grid-template-columns: minmax(240px, 1fr) minmax(320px, 1.2fr);
+  grid-template-columns: minmax(200px, 1fr) minmax(320px, 1fr);
   position: relative;
   min-height: calc(100vh - 180px);
   padding: 20px 0 10px;
@@ -1031,13 +1031,14 @@ p {
 
 .contact-callout {
   margin: 0;
-  margin-right: 22px;
+  margin-right: 4px;
   font-family: var(--pixel-font);
   font-size: clamp(20px, 3vw, 36px);
   color: #4f0e27;
   text-align: left;
   position: relative;
   z-index: 3;
+  justify-self: end;
 }
 
 .typewriter {
@@ -1099,8 +1100,8 @@ p {
 }
 
 .contact-buttons .social-btn:nth-child(1) {
-  --orbit: translate(-50%, -50%) rotate(-170deg) translate(var(--ring-radius))
-    rotate(170deg);
+  --orbit: translate(calc(-50% - 10px), -50%) rotate(-170deg)
+    translate(var(--ring-radius)) rotate(170deg);
   animation-delay: 0s;
 }
 
