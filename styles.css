@@ -992,26 +992,33 @@ p {
 
 .contact-layout {
   display: grid;
-  gap: 16px;
-  justify-items: center;
+  gap: 24px;
+  align-items: center;
+  grid-template-columns: minmax(240px, 1fr) minmax(320px, 1.2fr);
   position: relative;
   min-height: calc(100vh - 180px);
   padding: 20px 0 10px;
 }
 
+.contact-stage {
+  position: relative;
+  width: min(560px, 90vw);
+  margin: 0 auto;
+}
+
 .contact-buttons {
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 38%;
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
-  --ring-radius: clamp(200px, 28vw, 320px);
+  --ring-radius: clamp(170px, 26vw, 250px);
   z-index: 2;
 }
 
 .contact-desk img {
-  width: min(520px, 80vw);
+  width: 100%;
   height: auto;
   display: block;
   image-rendering: pixelated;
@@ -1019,7 +1026,41 @@ p {
 }
 
 .contact-desk {
-  margin: auto 0;
+  margin: 0;
+}
+
+.contact-callout {
+  margin: 0;
+  margin-right: 22px;
+  font-family: var(--pixel-font);
+  font-size: clamp(20px, 3vw, 36px);
+  color: #4f0e27;
+  text-align: left;
+  position: relative;
+  z-index: 3;
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: normal;
+  max-width: var(--type-width, 14ch);
+}
+
+.typewriter .word {
+  display: inline-block;
+  opacity: 0;
+  animation: word-reveal 0.35s ease forwards;
+  animation-delay: calc(var(--i) * 0.22s);
+}
+
+.typewriter .word + .word {
+  margin-left: 0.2ch;
+}
+
+@keyframes word-reveal {
+  to {
+    opacity: 1;
+  }
 }
 
 .contact-buttons .social-btn {
@@ -1094,6 +1135,8 @@ p {
 @media (max-width: 700px) {
   .contact-layout {
     min-height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .contact-buttons {
