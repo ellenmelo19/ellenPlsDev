@@ -1002,11 +1002,11 @@ p {
 .contact-buttons {
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 52%;
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
-  --ring-radius: clamp(140px, 20vw, 210px);
+  --ring-radius: clamp(200px, 28vw, 320px);
   z-index: 2;
 }
 
@@ -1027,10 +1027,16 @@ p {
   pointer-events: auto;
   transform-origin: center;
   font-size: 12px;
-  padding: 10px 14px;
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(180deg, #fff 0%, #ffd8f1 100%);
+  border: 2px solid #f3bfe2;
+  box-shadow: 0 8px 16px rgba(59, 34, 85, 0.18);
   --orbit: translate(-50%, -50%);
   --float: 0px;
   transform: var(--orbit) translateY(var(--float));
@@ -1045,8 +1051,8 @@ p {
 }
 
 .contact-buttons .social-btn img {
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   image-rendering: pixelated;
 }
@@ -1058,20 +1064,20 @@ p {
 }
 
 .contact-buttons .social-btn:nth-child(2) {
-  --orbit: translate(-50%, -50%) rotate(-125deg) translate(var(--ring-radius))
-    rotate(125deg);
+  --orbit: translate(-50%, -50%) rotate(-130deg) translate(var(--ring-radius))
+    rotate(130deg);
   animation-delay: 0.6s;
 }
 
 .contact-buttons .social-btn:nth-child(3) {
-  --orbit: translate(-50%, -50%) rotate(-75deg) translate(var(--ring-radius))
-    rotate(75deg);
+  --orbit: translate(-50%, -50%) rotate(-90deg) translate(var(--ring-radius))
+    rotate(90deg);
   animation-delay: 1.1s;
 }
 
 .contact-buttons .social-btn:nth-child(4) {
-  --orbit: translate(-50%, -50%) rotate(-30deg) translate(var(--ring-radius))
-    rotate(30deg);
+  --orbit: translate(-50%, -50%) rotate(-50deg) translate(var(--ring-radius))
+    rotate(50deg);
   animation-delay: 1.6s;
 }
 
