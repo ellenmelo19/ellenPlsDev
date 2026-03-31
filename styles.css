@@ -1009,7 +1009,7 @@ p {
 .contact-buttons {
   position: absolute;
   left: 50%;
-  top: 38%;
+  top: 42%;
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
@@ -1139,47 +1139,6 @@ p {
   }
 }
 
-@media (max-width: 720px) {
-  .contact-layout {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .contact-stage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: min(520px, 92vw);
-  }
-
-  .contact-buttons {
-    position: static;
-    transform: none;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 6px;
-    justify-content: center;
-    margin-top: 12px;
-    width: auto;
-    height: auto;
-    order: 2;
-  }
-
-  .contact-desk {
-    order: 1;
-  }
-
-  .contact-buttons .social-btn {
-    position: static;
-    animation: none;
-    width: 56px;
-    height: 56px;
-    border-radius: 999px;
-    padding: 0;
-  }
-}
-
 @media (max-width: 900px) {
   .contact-layout {
     grid-template-columns: 1fr;
@@ -1203,6 +1162,49 @@ p {
 
   .contact-desk img {
     width: min(420px, 90vw);
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-layout {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(520px, 92vw);
+  }
+
+  .contact-buttons {
+    position: static;
+    transform: none;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    order: 1;
+    --ring-radius: 0px;
+    z-index: 3;
+  }
+
+  .contact-desk {
+    order: 2;
+  }
+
+  .contact-buttons .social-btn {
+    position: static;
+    animation: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    padding: 0;
+    transform: none;
   }
 }
 
